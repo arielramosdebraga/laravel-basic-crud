@@ -41,6 +41,7 @@
                     </div>
                 @endforeach
             </div>
+            {{ $products->links('layouts.pagination') }}
         </div>
     </section>
 @endsection

@@ -15,7 +15,7 @@ class IndexController extends Controller
             $query->where('name', 'like', '%' .  $vl . '%');
         });
 
-        $products = $products->get();
+        $products = $products->paginate(3);
 
         return view('index', [
             'products' => $products

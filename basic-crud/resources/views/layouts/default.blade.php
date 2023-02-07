@@ -10,7 +10,7 @@
         http-equiv="X-UA-Compatible"
         content="ie=edge"
     >
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
     <title>Basic Crud</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -41,8 +41,6 @@
     @yield('content')
 
     <footer class="text-gray-600">
-        <div class="border-t border-gray-200">
-        </div>
         <div class="bg-gray-100">
             <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
                 <p class="text-gray-500 text-sm text-center sm:text-left">© 2022 Laravel 9 —
