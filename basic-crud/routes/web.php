@@ -29,5 +29,3 @@ Route::put('/admin/products/{product}', [AdminProductController::class, 'update'
 
 Route::get('/admin/products/{product}/delete', [AdminProductController::class, 'destroy'])->name('admin.product.destroy');
 Route::get('/admin/products/{product}/delete-image', [AdminProductController::class, 'destroyImage'])->name('admin.product.destroyImage');
-
-Route::get('/user', [UserController::class, 'index'])->name('user');

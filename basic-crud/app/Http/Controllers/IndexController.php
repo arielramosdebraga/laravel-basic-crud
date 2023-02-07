@@ -7,8 +7,16 @@ use App\Models\Product;
 
 class IndexController extends Controller
 {
-    public function index() {
-        $products = Product::all();
+    public function index(Request $request)
+    {
+        $products = Product::query();
+
+        $products->when($request->search, function($query, $vl) {
+            $query->where('name', 'like', '%' .  $vl . '%');
+        });
+
+        $products = $products->get();
+
         return view('index', [
             'products' => $products
         ]);
